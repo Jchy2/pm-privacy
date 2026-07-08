@@ -1,74 +1,428 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PM｜个人管理 - 隐私政策</title>
-  <style>
-    body {
-      max-width: 860px;
-      margin: 40px auto;
-      padding: 0 20px 60px;
-      font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
-      line-height: 1.8;
-      color: #222;
-      background: #fff;
-    }
-    h1 { margin-bottom: 8px; }
-    h2 { margin-top: 30px; }
-    .meta { color: #666; margin-bottom: 30px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM｜个人管理 · 服务协议 & 隐私政策</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f6f8fa;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1e2a3a;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            padding: 2.5rem 2rem;
+        }
+
+        /* 头部 */
+        .header {
+            border-bottom: 2px solid #eef2f6;
+            padding-bottom: 1.8rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0b1b2f;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header h1 small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #4a5b6e;
+            margin-left: 6px;
+            background: #eef2f6;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+        }
+
+        .header .effective-date {
+            font-size: 0.95rem;
+            color: #3d4e62;
+            background: #f0f3f7;
+            padding: 0.3rem 1.2rem;
+            border-radius: 30px;
+            white-space: nowrap;
+        }
+
+        /* 双栏布局 */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .col {
+            flex: 1 1 46%;
+            min-width: 340px;
+        }
+
+        .policy-card {
+            background: #fafcff;
+            border-radius: 20px;
+            padding: 1.8rem 1.8rem 2.2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e9edf3;
+            height: 100%;
+            transition: border-color 0.2s;
+        }
+
+        .policy-card:hover {
+            border-color: #cdd7e6;
+        }
+
+        .policy-card h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #0b1b2f;
+            padding-bottom: 0.6rem;
+            border-bottom: 3px solid #d0dcec;
+            margin-bottom: 1.6rem;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .policy-card h2 .badge {
+            font-size: 0.8rem;
+            background: #e1e8f0;
+            color: #1f3348;
+            padding: 0.1rem 0.8rem;
+            border-radius: 30px;
+            font-weight: 400;
+            margin-left: 8px;
+        }
+
+        .policy-card p {
+            margin-bottom: 1.2rem;
+            color: #1f2c3f;
+        }
+
+        .policy-card strong {
+            color: #0c1f32;
+            font-weight: 600;
+        }
+
+        .policy-card .section {
+            margin-bottom: 1.6rem;
+        }
+
+        .policy-card .section-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #14273e;
+            display: inline-block;
+            margin-bottom: 0.2rem;
+            background: linear-gradient(to right, #eef4fc, transparent);
+            padding-right: 8px;
+        }
+
+        .policy-card .section-content {
+            margin-top: 0.2rem;
+            padding-left: 0.2rem;
+        }
+
+        .policy-card .section-content p {
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-card ul, .policy-card ol {
+            margin: 0.4rem 0 0.8rem 1.4rem;
+            color: #1f2c3f;
+        }
+
+        .policy-card li {
+            margin-bottom: 0.3rem;
+        }
+
+        .policy-card .highlight-box {
+            background: #f2f6fd;
+            padding: 0.8rem 1.2rem;
+            border-radius: 14px;
+            margin: 1rem 0 1.2rem 0;
+            border-left: 4px solid #809ab3;
+            color: #1f3349;
+        }
+
+        .policy-card .contact-line {
+            margin-top: 1.8rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #dee6f0;
+            font-weight: 500;
+            color: #1f3349;
+        }
+
+        .policy-card .contact-line a {
+            color: #1a5f8b;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #b0c8dd;
+        }
+
+        .policy-card .contact-line a:hover {
+            color: #0b3a5a;
+            border-bottom: 1px solid #0b3a5a;
+        }
+
+        /* 响应式 */
+        @media (max-width: 760px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+                flex-wrap: wrap;
+            }
+            .col {
+                flex: 1 1 100%;
+                min-width: 0;
+            }
+            .policy-card {
+                padding: 1.4rem 1.2rem;
+            }
+            .policy-card h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* 小工具 */
+        .mt-1 { margin-top: 0.5rem; }
+        .mb-1 { margin-bottom: 0.5rem; }
+        .text-muted { color: #4f627a; }
+        .divider-light { height: 1px; background: #e0e7f0; margin: 1.2rem 0; }
+
+        .footer-note {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5b6f87;
+            border-top: 1px solid #e4ebf3;
+            padding-top: 1.8rem;
+            letter-spacing: 0.3px;
+        }
+        .footer-note span {
+            background: #f0f4fa;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+        }
+    </style>
 </head>
 <body>
-  <h1>PM｜个人管理 隐私政策</h1>
-  <div class="meta">生效日期：2026年7月5日</div>
+<div class="container">
 
-  <p>
-    PM｜个人管理是一款面向 Windows 的本地优先个人信息与事务管理软件。
-    本隐私政策说明软件处理用户信息的范围、保存方式及用户可使用的数据控制方式。
-  </p>
+    <!-- 头部 -->
+    <div class="header">
+        <h1>
+            PM｜个人管理
+            <small>本地优先 · 个人信息管理</small>
+        </h1>
+        <div class="effective-date">📅 生效日期：2026年7月8日</div>
+    </div>
 
-  <h2>一、信息处理范围</h2>
-  <p>
-    PM 仅处理用户主动录入、导入或在软件中维护的信息，包括个人资料、社会关系、
-    提醒事项、报销记录、网站及应用信息、附件及用户自行设置的资料库内容。
-  </p>
+    <!-- 双栏：服务协议 + 隐私政策 -->
+    <div class="row">
 
-  <h2>二、本地存储</h2>
-  <p>
-    PM 采用本地优先方式运行。用户资料默认保存在当前 Windows 用户的本机环境中，
-    应用程序安装目录与用户资料目录相互独立。
-  </p>
+        <!-- 左侧：服务协议 -->
+        <div class="col">
+            <div class="policy-card">
+                <h2>
+                    📋 服务协议
+                    <span class="badge">v1.0</span>
+                </h2>
 
-  <h2>三、数据传输</h2>
-  <p>
-    当前版本不提供云端账户、云端同步或远程资料库服务。
-    除非用户主动执行导入、导出或访问软件明确提供的外部链接，
-    软件不会将用户录入的资料上传至开发者服务器。
-  </p>
+                <p style="font-size:1.05rem; background:#f4f8ff; padding:0.6rem 1rem; border-radius:14px; border-left:4px solid #6f8db0;">
+                    PM｜个人管理 是一款面向 Windows 的本地优先个人信息与事务管理软件。使用本软件前，请确认你理解并同意本协议。
+                </p>
 
-  <h2>四、导入、导出与附件</h2>
-  <p>
-    资料库导入、导出、附件导出和 Excel 导出均由用户主动发起。
-    用户应自行妥善保管导出文件、附件及相关密码。
-  </p>
+                <div class="section">
+                    <div class="section-title">一、软件用途</div>
+                    <div class="section-content">
+                        <p>PM 用于个人自我管理、资料整理、提醒、报销记录、社会关系、网站及应用信息和本地资料库管理。软件不应被用于违法、侵权、破坏他人权益或规避安全限制的行为。</p>
+                    </div>
+                </div>
 
-  <h2>五、用户控制</h2>
-  <p>
-    用户可以在软件内维护、修改或删除个人资料，也可以通过“数据库管理”
-    导出、删除或切换独立资料库。卸载程序不会主动删除用户本机资料目录；
-    用户可在确认不再需要资料后自行删除相关本地数据。
-  </p>
+                <div class="section">
+                    <div class="section-title">二、账户与登录</div>
+                    <div class="section-content">
+                        <p>当前版本提供本地账户注册、登录、邮箱验证码和密码重置能力。账户信息主要用于本机身份识别、敏感信息查看验证和后续联网功能的授权边界准备。用户应自行保管账户密码和邮箱验证码。</p>
+                    </div>
+                </div>
 
-  <h2>六、政策更新</h2>
-  <p>
-    如 PM 后续新增云同步、联网账户、分析服务或其他涉及个人信息传输的功能，
-    本隐私政策将同步更新。
-  </p>
+                <div class="section">
+                    <div class="section-title">三、本地资料库与安全仓</div>
+                    <div class="section-content">
+                        <p>用户资料默认保存在当前 Windows 用户环境下的本机安全仓中。资料库、附件、导出包和备份文件由用户自行管理；用户主动选择连接已有资料库时，软件按原位置连接，不默认复制为新库。</p>
+                    </div>
+                </div>
 
-  <h2>七、联系我们</h2>
-  <p>
-    如对本隐私政策有疑问，请联系：<a href="mailto:你的支持邮箱">1014719626@qq.com</a>
-  </p>
+                <div class="section">
+                    <div class="section-title">四、敏感信息查看</div>
+                    <div class="section-content">
+                        <p>网站及应用密码默认掩码显示。查看密码时需要输入当前账户密码；未登录或尚未注册账户时，测试默认密码为 <strong>88888888</strong>。用户应避免在不可信环境中展示或传播敏感密码。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">五、授权边界</div>
+                    <div class="section-content">
+                        <p>软件提供云端密文备份与同步授权、AI解析授权、公开协作授权三类隐私选项。除非对应能力完成接入且用户明确授权，软件不会据此自动上传资料、调用 AI 或公开协作。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">六、导入、导出与更新</div>
+                    <div class="section-content">
+                        <p>导入、导出、资料库切换、资料库连接、附件导出和 Excel 导出均由用户主动发起。用户应在升级、迁移或连接旧资料库前保留必要备份。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">七、协议更新</div>
+                    <div class="section-content">
+                        <p>如软件新增云同步、联网账户、AI服务、团队协作或其他涉及联网处理的能力，本协议将随功能同步更新，并在软件或公开页面中提供查看入口。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">八、联系我们</div>
+                    <div class="section-content">
+                        <p>如对本协议有疑问，请通过 <a href="mailto:1014719626@qq.com">1014719626@qq.com</a> 联系。</p>
+                    </div>
+                </div>
+
+                <div class="contact-line">
+                    📧 服务协议 · 联系邮箱：<a href="mailto:1014719626@qq.com">1014719626@qq.com</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧：隐私政策 -->
+        <div class="col">
+            <div class="policy-card">
+                <h2>
+                    🔒 隐私政策
+                    <span class="badge">v1.0</span>
+                </h2>
+
+                <p style="font-size:1.05rem; background:#f4f8ff; padding:0.6rem 1rem; border-radius:14px; border-left:4px solid #6f8db0;">
+                    PM｜个人管理 是一款面向 Windows 的本地优先个人信息与事务管理软件。本隐私政策说明软件处理用户信息的范围、保存方式、授权边界及用户可使用的数据控制方式。
+                </p>
+
+                <div class="section">
+                    <div class="section-title">一、信息处理范围</div>
+                    <div class="section-content">
+                        <p>PM 仅处理用户主动录入、导入或在软件中维护的信息，包括自我管理法则与打卡记录、个人信息结构与资料、报销字段与清单、社会关系字段与资料、网站及应用分类与一般信息、网站及应用密码、缺点与对策框架、提醒事项、附件及用户自行设置的资料库内容。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">二、本地存储</div>
+                    <div class="section-content">
+                        <p>PM 采用本地优先方式运行。用户资料默认保存在当前 Windows 用户的本机环境中，应用程序安装目录与用户资料目录相互独立。资料库可进入本机安全仓保存，关闭应用后会重新锁定。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">三、账户与邮箱</div>
+                    <div class="section-content">
+                        <p>当前版本提供本地账户注册、登录、绑定邮箱、邮箱验证码和忘记密码功能。邮箱用于注册验证、登录辅助、找回账户和重要安全提醒。测试版验证码可能在本机界面中显示；正式接入邮件服务后，将按用户操作向绑定邮箱发送验证码。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">四、敏感密码</div>
+                    <div class="section-content">
+                        <p>网站及应用密码默认不纳入一般信息授权，并在界面中掩码显示。查看密码时需要当前账户密码；未登录或尚未注册账户时，默认密码为 <strong>88888888</strong>。软件不会以明文方式展示未请求查看的密码。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">五、授权选项</div>
+                    <div class="section-content">
+                        <p>用户可分别设置云端密文备份与同步授权、AI解析授权、公开协作授权。每一类授权可按数据大类选择范围。当前版本保存授权边界；在相关云端、AI或协作能力未完成接入并获得用户确认前，不会自动上传、调用 AI 或公开协作。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">六、数据传输</div>
+                    <div class="section-content">
+                        <p>除非用户主动执行导入、导出、打开外部链接、未来启用云端备份同步、AI解析或公开协作功能并明确授权，软件不会将用户录入的资料上传至开发者服务器。访问服务协议、隐私协议等公开链接时，将由浏览器打开对应网页。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">七、导入、导出与附件</div>
+                    <div class="section-content">
+                        <p>资料库导入、导出、连接已有资料库、附件导出和 Excel 导出均由用户主动发起。用户应自行妥善保管导出文件、附件、资料库位置及相关密码。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">八、用户控制</div>
+                    <div class="section-content">
+                        <p>用户可以在软件内维护、修改或删除个人资料，也可以通过数据库管理导出、删除、切换或连接独立资料库。卸载程序不会主动删除用户本机资料目录；用户可在确认不再需要资料后自行删除相关本地数据。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">九、政策更新</div>
+                    <div class="section-content">
+                        <p>如 PM 后续新增云同步、联网账户、AI服务、公开协作、分析服务或其他涉及个人信息传输的功能，本隐私政策将同步更新。</p>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <div class="section-title">十、联系我们</div>
+                    <div class="section-content">
+                        <p>如对本隐私政策有疑问，请通过 <a href="mailto:1014719626@qq.com">1014719626@qq.com</a> 联系。</p>
+                    </div>
+                </div>
+
+                <div class="contact-line">
+                    📧 隐私政策 · 联系邮箱：<a href="mailto:1014719626@qq.com">1014719626@qq.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部注脚 -->
+    <div class="footer-note">
+        <span>PM｜个人管理 · 本地优先 · 2026</span> &nbsp;·&nbsp; 服务协议 &amp; 隐私政策 同时生效
+    </div>
+
+</div>
 </body>
 </html>
